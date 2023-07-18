@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="CSS/register.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+</head>
+<!-- <script>
+  function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } 
+    else {
+      x.type = "password";
+    }
+</script> -->
+
+<body>
+  <section class="main">
+    <div class="register-container">
+      <div class="logo-img">
+        <img src="/image/itm_logo.png" alt="" width="50%">
+      </div>
+      <p class="title">Register Here</p>
+
+      
+      <div class="seperator"></div>
+      <% if(message.length>0){ %>
+            <div Style="color: red;">
+              <%= message %>
+              </div>
+      <% } %>
+      <form action="/userinsert" method="post" class="login-form" enctype="multipart/form-data">
+        <div class="form-control">
+          <input type="text" name="name" autocomplete="off" placeholder="Name" required>
+        </div>
+
+        <div class="form-control">
+          <input type="email" name="email" autocomplete="off" placeholder="Email" required>
+        </div>
+        <div class="form-control">
+          <input type="password" name="password" autocomplete="off" placeholder="Password" required>
+        </div>
+        <div class="form-control">
+          <input type="password" name="confirm_password" autocomplete="off" placeholder="Confirm Password" id="myInput" required>
+          <i onclick="myFunction()" id="togglePassword"></i>
+
+        </div>
+        <p class="pro-pic">Profile Picture</p>
+        <div class="form-control">
+          <input type="file" name="image" autocomplete="off" >
+        </div>
+
+        <button type="submit" class="submit">REGISTER</button>
+      </form>
+      <div class="log-now">
+        Have An Account? <a href="/">LOGIN NOW</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="side">
+    <img src="/image/register_image.png" alt="">
+  </section>
+
+</body>
+
+</html>

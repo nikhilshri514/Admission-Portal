@@ -1,0 +1,42 @@
+<%- include('../header.ejs')  %>
+<!-- table start -->
+<div class="container-fluid mb-4 pb-4 mt-3 pt-5">
+    <div class="container">
+        <h1>Edit Page</h1>
+        <form action="/courseupdate/<%= d.id %>" method="post" class="p-2">
+            <div class="mb-3">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" value="<%= d.name %>">
+              </div>
+    
+              <div class="mb-3">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" value="<%= d.email %>">
+              </div>
+    
+              <div class="mb-3">
+                <label>Mobile No</label>
+                <input type="number" name="phone" class="form-control" value="<%= d.phone %>">
+              </div>
+    
+              <div class="mb-3">
+                <label>10th Number</label>
+                <input type="number" name="tenth" class="form-control" value="<%= d.tenth %>">
+              </div>
+    
+              <div class="mb-3">
+                <label>12th Number</label>
+                <input type="number" name="twelth" class="form-control" value="<%= d.twelth %>">
+              </div>
+    
+              <div class="mb-3">
+                <label>Course</label>
+                <input type="text" name="course" value="Btech" class="form-control" readonly required value="<%= d.course %>">
+              </div>
+    
+              <button type="update" class="btn btn-secondary">Update</button>
+        </form>
+    </div>
+</div>
+<!-- table end -->
+<%- include('../footer.ejs')  %>
